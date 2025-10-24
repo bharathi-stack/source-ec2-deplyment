@@ -1,0 +1,45 @@
+6 hrs - 2.45
+3 hrs - 6.45
+
+
+
+
+A. Create a Salesforce Project:
+# Create a new folder for your project
+       sf project generate --name StudentProject
+# Navigate into the folder
+       cd StudentProject
+
+B. Authorize Your Dev Org:
+       bashsf org login web --set-default --alias DevOrg
+
+C. Retrieve Student Object from Dev Org:
+       sf project retrieve start --metadata CustomObject:Student__c
+
+D. Set Up GitHub Repository
+
+   # Initialize git in your project folder
+   git init
+
+   # Add all files
+   git add .
+
+   # Commit changes
+   git commit -m "Initial commit with Student object"
+
+   # Add GitHub repository
+   git remote add origin https://github.com/YOUR-USERNAME/salesforce-student-project.git
+
+   # Push to GitHub
+   git branch -M main
+   git push -u origin main
+
+
+E.
+   sf org login web --alias ProdOrg --instance-url https://login.salesforce.com
+   sf org display --target-org ProdOrg --verbose
+
+
+
+
+
